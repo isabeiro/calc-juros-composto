@@ -13,31 +13,43 @@
     <div class="header">
       Calculadora de Juros
     </div>
-    <div class="form">
-      <section class="form">
+    <div id="hideForm">
+      <form class="form" id="form">
         <label>
           Nome:
-          <input type="text">
+          <input type="text" name="name" id="name">
         </label>
         <label>
-          Mensalidade:
-          <input type="text">
+          Valor das mensalidades:
+          <div>
+            R$
+            <input type="text" name="monthly" id="monthly" class="monthly">
+            ,
+            <input type="text" name="monthlyDecimal" id="monthlyDecimal" class="monthly">
+          </div>
         </label>
         <label>
-          Taxa de juros:
-          <input type="text">
+          Taxa de juros: (em porcentagem)
+          <div class="taxCont">
+            <input type="text" name="tax" id="tax" class="tax">
+            ,
+            <input type="text" name="taxDecimal" id="taxDecimal" class="tax">
+            %
+          </div>
         </label>
         <label>
-          Tempo de contribuição:
-          <input type="text">
+          Tempo de contribuição (em meses):
+          <input type="text" name="time" id="time">
         </label>
-        <button>Simular</button>
-      </section>
-
+        <input type="submit" class="buttonSubmit" id="buttonSubmit">
+        
+      </form>
     </div>
+
+    <div class="resultText hidden" id="resultText"></div>
 
   </div>
 
-
+  <script src="script/main.js"></script>
 </body>
 </html>
